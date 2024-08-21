@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaginaResponsive</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="title">PAGINA RESPONSIVE</h1>
+    <section class="typescript">
+    <h2 class="title_typescript">TypeScript</h2>
+    <h3>¿Que es?</h3>
+        <p>Es un lenguaje de programacion de fuerte tipado que funciona en JavaScript, brindando mejores herramientas en cualquier escala</p>
+    <h3>Sintaxis</h3>
+    <pre><code class="language-typescript">
+        // Definición de un tipo básico, numero booleano y array.
+        let nombre: string = "Juan";
+        let edad: number = 25;
+        let esActivo: boolean = true;
+        let lista: number[] = [1, 2, 3];
+        
+        // Función que suma dos números
+        function sumar(a: number, b: number): number {
+            return a + b;
+        }
+        
+        // Uso de una interfaz
+        interface Persona {
+            nombre: string;
+            edad: number;
+        }
+        
+        let juan: Persona = {
+            nombre: "Juan",
+            edad: 25
+        };
+
+        // Clases
+        class Animal{
+            nombre: string;
+
+            constructor (nombre: string){
+                this.nombre = nombre;
+            }
+
+            mover(distancia: number): void {
+                console.log(`${this.nombre} se movió x metros.`);
+            }
+        }
+
+        // Uniones (permitir que las variables puedan tener mas de un tipo) 
+
+        let identificador: number | string;
+        identificador = 123;
+        identificador = "ABC";
+
+        // Generics (Componentes reutilizables que funionan con multiples tipos)
+    <br></code></pre>
+    </section>
+    <section class="angular">
+        <h2 class="title_angular">Angular</h2>
+        <h3>¿Que es?</h3>
+        <p>a</p>
+    </section>
+    <section class="ionic">
+        <h2 class="title_ionic">Ionic</h2>
+        <h3>¿Que es?</h3>
+        <p>b</p>
+    </section>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+</html>
