@@ -57,6 +57,12 @@
         identificador = "ABC";
 
         // Generics (Componentes reutilizables que funionan con multiples tipos)
+        
+        function identidad<T>(arg: T): T {
+            return arg;
+          }
+          
+          let salida = identidad<string>("Hola");
     <br></code></pre>
     </section>
     <section class="angular">
