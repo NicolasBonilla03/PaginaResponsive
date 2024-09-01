@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism.min.css" rel="stylesheet" />
 </head>
 <body>
-    <h1 class="title">PAGINA RESPONSIVE</h1>
-    <section class="typescript">
-    <h2 class="title_typescript">TypeScript</h2>
-    <h3>¿Que es?</h3>
+    <header>
+        <h1>TypeScript, Angular y Ionic</h1>
+        <nav>
+            <button onclick="seccion('typescript')">TypeScript</button>
+            <button onclick="seccion('angular')">Angular</button>
+            <button onclick="seccion('ionic')">Ionic</button>
+        </nav>
+    </header>
+    <main>
+        <section id="typescript">
+            <h2>TypeScript</h2>
+            <h3>¿Que es?</h3>
         <p>Es un lenguaje de programacion de fuerte tipado que funciona en JavaScript, brindando mejores herramientas en cualquier escala</p>
     <h3>Sintaxis</h3>
     <pre><code class="language-typescript">
@@ -64,18 +72,20 @@
           
           let salida = identidad<string>("Hola");
     <br></code></pre>
-    </section>
-    <section class="angular">
-        <h2 class="title_angular">Angular</h2>
-        <h3>¿Que es?</h3>
-        <p>a</p>
-    </section>
-    <section class="ionic">
-        <h2 class="title_ionic">Ionic</h2>
-        <h3>¿Que es?</h3>
-        <p>b</p>
-    </section>
-    
+        </section>
+        <section id="angular">
+            <h2>Angular</h2>
+            <h3>¿Que es?</h3>
+        </section>
+        <section id="ionic">
+            <h2>Ionic</h2>
+            <h3>¿Que es?</h3>
+        </section>
+    </main>
+    <footer>
+        <img src="https://media.tenor.com/DFfCL02_DCcAAAAe/cat-look.png" alt="">
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
 </html>
