@@ -13,6 +13,7 @@ header{
     color: white;
     padding: 1em 0;
     width: 100vw;
+    font-size: 2vh;
 }
 
 footer{
@@ -69,39 +70,45 @@ img{
 }
 
 @media (min-width: 650px) and (max-width: 960px) {
+    header {
+        padding: 0.5em 0;
+        height: 19vh;
+    }
     nav {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
     nav button {
-        margin: 10px 0;
-        width: 80%;
+        width: 90%;
+        padding: 15px;
+        font-size: 18px;
     }
-    
+
+
     section{
-        margin-top: 19em;
-        margin-bottom: -15em;
+        margin-top: 20vh;
+        margin-bottom: -9em;
     }
 
 }
 
 @media (max-width: 650px) {
 
-    header, footer {
+    header {
         padding: 0.5em 0;
+        height: 21vh;
     }
 
     nav {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
     nav button {
         width: 90%;
-        margin: 0.5em 0;
         padding: 15px;
         font-size: 18px;
     }
@@ -111,8 +118,8 @@ img{
         margin: 1.5em 0;
         padding: 0.5em;
         box-shadow: none;
-        margin-top: 20em;
-        margin-bottom: -16em;
+        margin-top: 23vh;
+        margin-bottom: -9em;
     }
 
     h2 {
@@ -137,3 +144,5 @@ code {
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     color: #000000;
 }
+
+
