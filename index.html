@@ -21,57 +21,91 @@
             <h2>TypeScript</h2>
             <h3>¿Que es?</h3>
         <p>Es un lenguaje de programacion de fuerte tipado que funciona en JavaScript, brindando mejores herramientas en cualquier escala</p>
-    <h3>Sintaxis</h3>
-    <pre><code class="language-typescript">
-        // Definición de un tipo básico, numero booleano y array.
-        let nombre: string = "Juan";
-        let edad: number = 25;
-        let esActivo: boolean = true;
-        let lista: number[] = [1, 2, 3];
-        
-        // Función que suma dos números
-        function sumar(a: number, b: number): number {
-            return a + b;
+        <h3>Sintaxis</h3>
+        <p>La sintaxis de TypeScript es muy similar a la de JavaScript, con la adición de anotaciones de tipos. Aquí un ejemplo básico:</p>
+        <pre>
+    <code>
+    let message: string = "Hola Mundo!";
+    console.log(message);
+        </code>
+        </pre>
+    
+        <h3>¿Cómo maneja las variables TypeScript?</h3>
+        <p>En TypeScript, las variables se pueden declarar utilizando <code>let</code>, <code>const</code> o <code>var</code>, al igual que en JavaScript. Sin embargo, TypeScript permite especificar el tipo de la variable:</p>
+        <pre>
+    <code>
+    let nombre: string = "Juan";
+    let edad: number = 30;
+    let activo: boolean = true;
+    </code>
+        </pre>
+        <p>Esto permite que el compilador de TypeScript detecte errores de tipo antes de ejecutar el código.</p>
+    
+        <h3>Clases, Métodos, Interfaces, y Types</h3>
+        <p>TypeScript ofrece una sintaxis de clase similar a la de otros lenguajes orientados a objetos. Además, introduce interfaces y tipos personalizados:</p>
+        <pre>
+    <code>
+    // Clases
+
+    class Persona {
+        nombre: string;
+        edad: number;
+    
+        constructor(nombre: string, edad: number) {
+            this.nombre = nombre;
+            this.edad = edad;
         }
-        
-        // Uso de una interfaz
-        interface Persona {
-            nombre: string;
-            edad: number;
+    
+        saludar(): string {
+            return `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
         }
-        
-        let juan: Persona = {
-            nombre: "Juan",
-            edad: 25
-        };
+    }
 
-        // Clases
-        class Animal{
-            nombre: string;
+    // Uso de una interfaz
 
-            constructor (nombre: string){
-                this.nombre = nombre;
-            }
+    interface Animal {
+        nombre: string;
+        sonido(): string;
+    }
 
-            mover(distancia: number): void {
-                console.log(`${this.nombre} se movió x metros.`);
-            }
+    // Uniones (permitir que las variables puedan tener mas de un tipo) 
+
+    type ID = number | string;
+    let id: ID = 123;
+    id = "ABC123";
+    </code>
+        </pre>
+    
+        <h3>Ciclos y Condicionales</h3>
+        <p>TypeScript soporta las mismas estructuras de control que JavaScript, como <code>if</code>, <code>for</code>, <code>while</code>, etc.:</p>
+        <pre>
+    <code>
+    let numeros: number[] = [1, 2, 3, 4, 5];
+    
+    for (let num of numeros) {
+        if (num % 2 === 0) {
+            console.log(`${num} es par`);
+        } else {
+            console.log(`${num} es impar`);
         }
-
-        // Uniones (permitir que las variables puedan tener mas de un tipo) 
-
-        let identificador: number | string;
-        identificador = 123;
-        identificador = "ABC";
-
-        // Generics (Componentes reutilizables que funionan con multiples tipos)
-        
-        function identidad<T>(arg: T): T {
-            return arg;
-          }
-          
-          let salida = identidad<string>("Hola");
-    <br></code></pre>
+    }
+    </code>
+        </pre>
+    
+        <h3>Arrays, Listas, y Funciones</h3>
+        <p>TypeScript maneja arrays y listas de manera similar a JavaScript, pero con la posibilidad de especificar el tipo de los elementos:</p>
+        <pre>
+    <code>
+    let listaDeNumeros: number[] = [1, 2, 3, 4, 5];
+    
+    function sumar(a: number, b: number): number {
+        return a + b;
+    }
+    
+    let resultado = sumar(5, 10);
+    console.log(`Resultado: ${resultado}`);
+    </code>
+        </pre>
         </section>
         <section id="angular">
             <h2>Angular</h2>
