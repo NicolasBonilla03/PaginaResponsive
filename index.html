@@ -63,13 +63,13 @@
 
 
             constructor (nombre: string){
-                this.nombre = nombre;
-            }
+            this.nombre = nombre;
+        }
 
 
             mover(distancia: number): void {
-                console.log(`${this.nombre} se movió x metros.`);
-            }
+            console.log(`${this.nombre} se movió x metros.`);
+        }
         }
         
 
@@ -97,11 +97,11 @@
         type ID = number | string;
 
 
-         let usuarioId: ID;
+        let usuarioId: ID;
 
 
-         usuarioId = 123;      // válido
-         usuarioId = "abc123"; // también válido
+        usuarioId = 123;      // válido
+        usuarioId = "abc123"; // también válido
 
 
     </code>
@@ -111,48 +111,52 @@
         <p>TypeScript soporta las mismas estructuras de control que JavaScript, como <code>if</code>, <code>for</code>, <code>while</code>, etc.:</p>
         <pre>
     <code>
-    //IF
+        //IF
    
-    let numero: number = 5;
-    if (true)
-    {
+        let numero: number = 5;
+        if (true)
+        {
         console.log('This will always executed.');
-    }
+        }
    
-    if (false) {
+        if (false) {
         console.log('This will never executed.');
-    }    
+        }   
+
         //SWITCH
-    switch(expression) {
+    
+        switch(expression) {
          case constant-expression1: {
              //statements;
              break;
-         }
+        }
         case constant_expression2: {
              //statements;
              break;
-         }
+        }
          default: {
               //statements;
             break;
-         }
-     }
+        }
+        }
 
 
         //FOR  
+
         for (let i = 0; i < 3; i++) {
             console.log ("Block statement execution no." + i);
-          }
+        }
 
 
         //WHILE
+
         let i: number = 2;
 
 
         while (i < 4) {
         console.log( "Block statement execution no." + i )
         i++;
-          }
+        }
 
     </code>
         </pre>
