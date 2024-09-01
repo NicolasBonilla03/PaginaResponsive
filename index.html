@@ -19,8 +19,8 @@
     <main>
         <section id="typescript">
             <h2>TypeScript</h2>
-            <h3>¿Que es?</h3>
-        <p>Es un lenguaje de programacion de fuerte tipado que funciona en JavaScript, brindando mejores herramientas en cualquier escala</p>
+            <h3>¿Qué es TypeScript?</h3>
+    <p>TypeScript es un lenguaje de programación de código abierto desarrollado por Microsoft. Es un superconjunto tipado de JavaScript que se compila a JavaScript puro. TypeScript agrega tipado estático, clases, interfaces y otras características avanzadas que mejoran la escritura y el mantenimiento de código JavaScript.</p>
         <h3>Sintaxis</h3>
         <p>La sintaxis de TypeScript es muy similar a la de JavaScript, con la adición de anotaciones de tipos. Aquí un ejemplo básico:</p>
         <pre>
@@ -108,7 +108,7 @@
 
 
     </code>
-        </pre>
+</pre>
     
         <h3>Ciclos y Condicionales</h3>
         <p>TypeScript soporta las mismas estructuras de control que JavaScript, como <code>if</code>, <code>for</code>, <code>while</code>, etc.:</p>
@@ -161,9 +161,7 @@
         i++;
         }
 
-    </code>
-        </pre>
-    
+    </code></pre>
         <h3>Arrays, Listas, y Funciones</h3>
         <p>TypeScript maneja arrays y listas de manera similar a JavaScript, pero con la posibilidad de especificar el tipo de los elementos:</p>
         <pre>
@@ -181,8 +179,69 @@
         </section>
         <section id="angular">
             <h2>Angular</h2>
-            <h3>¿Que es?</h3>
-        </section>
+        
+            <h3>¿Qué es Angular?</h3>
+            <p>Angular es un framework de desarrollo de aplicaciones web de código abierto, mantenido por Google. Está basado en TypeScript y está diseñado para facilitar la creación de aplicaciones web modernas, escalables y de alto rendimiento.</p>
+        
+            <h3>Características Importantes de Angular</h3>
+            <ul>
+                <li><strong>Uso de DOM regular:</strong> Angular hace uso de DOM regular, lo que permite una mejor organización conforme avanza el desarrollo web.</li>
+                <br>
+                <li><strong>Enlace de datos o Data Binding:</strong> Angular ofrece un mecanismo de enlace de datos bidireccional, lo que permite sincronizar automáticamente la interfaz de usuario con el modelo de datos.</li>
+                <br>
+                <li><strong>Compatibilidad móvil y de escritorio:</strong> AAngular funciona tanto para el desarrollo de aplicaciones móviles como de escritorio. Esto también significa que puede ejecutarse en la mayoría de navegadores web.</li>
+                <br>
+                <li><strong>Velocidad y rendimiento:</strong> Angular cuenta con código de generación que permite convertir tus plantillas en códigos altamente optimizados. Esto te ofrece todos los beneficios del código escrito a mano con la productividad de un marco.</li>
+                <br>
+                <li><strong>Productividad:</strong> Angular permite la creación rápida de vistas de interfaz de usuarios con una sintaxis de plantilla muy sencilla y eficaz.</li>
+                <br>
+                <li><strong>Enlace bidireccional de datos:</strong> Angular enlaza JavaScript y HTML, y una de sus principales ventajas es que el código de ambos está sincronizado, lo que ahorra mucho tiempo para los desarrolladores web.</li>
+                <br>
+                <li><strong>Directivas:</strong> Existen diferentes tipos de directivas muy útiles que puedes usar para diferentes acciones como vincular el contenido de un elemento HTML a los datos de aplicación, o especificar que el contenido de un texto debe reemplazarse con una plantilla.</li>
+                <br>
+                <li><strong>Pruebas:</strong> Angular hacer uso del framework de prueba llamado Jasmine, el cual proporciona diversas funcionalidades para escribir diferentes tipos de casos de prueba.</li>
+                <br>
+            </ul>
+        
+            <h3>¿Cómo se Configura Angular?</h3>
+            <p>Para configurar un proyecto en Angular, se utiliza Angular CLI (Command Line Interface). Aquí tienes los pasos básicos para crear y configurar una nueva aplicación Angular:</p>
+            <pre>
+        <code>
+        // Instalar Angular CLI globalmente
+        npm install -g @angular/cli
+        
+        // Crear un nuevo proyecto Angular
+        ng new mi-app-angular
+        
+        // Navegar al directorio del proyecto
+        cd mi-app-angular
+        
+        // Iniciar el servidor de desarrollo
+        ng serve
+        </code>
+            </pre>
+            <p>Una vez que el servidor está en marcha, puedes acceder a tu aplicación Angular usando tu navegador, el cual normalmente se inicia en este puerto: <code>http://localhost:4200</code>.</p>
+        
+            <h3>Signal</h3>
+    <p>En Angular, un <strong>Signal</strong> es un nuevo concepto introducido para facilitar la reactividad y el manejo de estado. Los Signals son flujos de datos reactivos que se utilizan para manejar la comunicación entre componentes o servicios, permitiendo que los cambios en el estado se propaguen automáticamente a través de la aplicación.</p>
+    <pre>
+<code>
+// Ejemplo de uso de Signal en Angular
+import { Signal } from '@angular/core';
+
+export class MiComponente {
+    private _contador = Signal(0);
+
+    incrementar() {
+        this._contador.value++;
+    }
+
+    obtenerValor() {
+        return this._contador.value;
+    }
+}</code>
+    </pre>
+</section>
         <section id="ionic">
             <h2>Ionic</h2>
             <h3>¿Que es?</h3>
