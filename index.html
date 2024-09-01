@@ -34,9 +34,21 @@
         <p>En TypeScript, las variables se pueden declarar utilizando <code>let</code>, <code>const</code> o <code>var</code>, al igual que en JavaScript. Sin embargo, TypeScript permite especificar el tipo de la variable:</p>
         <pre>
     <code>
-    let nombre: string = "Juan";
-    let edad: number = 30;
-    let activo: boolean = true;
+        //TIPOS DE VARIABLES
+        // 1. string: Cadenas de texto
+        // 2. number: Números (tanto enteros como flotantes)
+        // 3. boolean: Verdadero o falso
+        // 4. any: Permite que una variable contenga cualquier tipo de dato
+        // 5. void: Indica que una función no devuelve ningún valor
+        // 6. null y undefined: Para valores nulos y no definidos
+        // 7. array: Listas de valores
+
+
+        // Definición de un tipo básico, numero booleano y array.
+        let nombre: string = "Juan";
+        let edad: number = 25;
+        let esActivo: boolean = true;
+        let lista: number[] = [1, 2, 3];
     </code>
         </pre>
         <p>Esto permite que el compilador de TypeScript detecte errores de tipo antes de ejecutar el código.</p>
@@ -45,34 +57,53 @@
         <p>TypeScript ofrece una sintaxis de clase similar a la de otros lenguajes orientados a objetos. Además, introduce interfaces y tipos personalizados:</p>
         <pre>
     <code>
-    // Clases
+        // CLASES: Son estructuras definidas que sirven como modelos para crear objetos
+        class Animal{
+            nombre: string;
 
-    class Persona {
-        nombre: string;
-        edad: number;
-    
-        constructor(nombre: string, edad: number) {
-            this.nombre = nombre;
-            this.edad = edad;
+
+            constructor (nombre: string){
+                this.nombre = nombre;
+            }
+
+
+            mover(distancia: number): void {
+                console.log(`${this.nombre} se movió x metros.`);
+            }
         }
-    
-        saludar(): string {
-            return `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
+        
+
+        //  MÉTODOS: Es un bloque de código designado para desarrollar una tarea específica.
+       
+        function sumar(a: number, b: number): number {
+            return a + b;
         }
-    }
 
-    // Uso de una interfaz
 
-    interface Animal {
-        nombre: string;
-        sonido(): string;
-    }
 
-    // Uniones (permitir que las variables puedan tener mas de un tipo) 
+        //  INTERFAZ: Las interfaces nos permiten definir la estructura de un objeto, sus propiedades y métodos pero sin implementar funcionalidades.
+        interface Persona {
+            nombre: string;
+            edad: number;
+        }
+       
+        let juan: Persona = {
+            nombre: "Juan",
+            edad: 25
+        };
 
-    type ID = number | string;
-    let id: ID = 123;
-    id = "ABC123";
+
+        //TYPES: Ayudan a describir el tipo de datos con el que estamos trabajando
+        type ID = number | string;
+
+
+         let usuarioId: ID;
+
+
+         usuarioId = 123;      // válido
+         usuarioId = "abc123"; // también válido
+
+
     </code>
         </pre>
     
@@ -80,15 +111,49 @@
         <p>TypeScript soporta las mismas estructuras de control que JavaScript, como <code>if</code>, <code>for</code>, <code>while</code>, etc.:</p>
         <pre>
     <code>
-    let numeros: number[] = [1, 2, 3, 4, 5];
-    
-    for (let num of numeros) {
-        if (num % 2 === 0) {
-            console.log(`${num} es par`);
-        } else {
-            console.log(`${num} es impar`);
-        }
+    //IF
+   
+    let numero: number = 5;
+    if (true)
+    {
+        console.log('This will always executed.');
     }
+   
+    if (false) {
+        console.log('This will never executed.');
+    }    
+        //SWITCH
+    switch(expression) {
+         case constant-expression1: {
+             //statements;
+             break;
+         }
+        case constant_expression2: {
+             //statements;
+             break;
+         }
+         default: {
+              //statements;
+            break;
+         }
+     }
+
+
+        //FOR  
+        for (let i = 0; i < 3; i++) {
+            console.log ("Block statement execution no." + i);
+          }
+
+
+        //WHILE
+        let i: number = 2;
+
+
+        while (i < 4) {
+        console.log( "Block statement execution no." + i )
+        i++;
+          }
+
     </code>
         </pre>
     
