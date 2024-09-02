@@ -1,4 +1,7 @@
 function seccion(sectionId) {
     const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth' });
+    const desface = -170; 
+    const y = section.getBoundingClientRect().top + window.pageYOffset + desface;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
 }
