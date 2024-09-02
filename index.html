@@ -240,11 +240,92 @@ export class MiComponente {
         return this._contador.value;
     }
 }</code>
+    </pre> 
+        <h3>Computed Signals</h3>
+        <p>La función <strong>computed</strong> toma como argumento una función que devuelve el valor derivado, y Angular se encarga de observar los signals utilizados dentro de esa función para calcular el valor cuando sea necesario.
+        </p>
+        <pre>
+            <code>
+                const precioUnitario = signal(50);
+const cantidad = signal(2);
+
+// Computed signal que depende de otros signals
+const costoTotal = computed(() => precioUnitario() * cantidad());
+
+// Leer el valor computado
+console.log(costoTotal()); // Salida: 100
+
+// Cambiar un valor base
+cantidad.set(3);
+
+// El valor computado se actualiza automáticamente
+console.log(costoTotal()); // Salida: 150
+            </code>
+        </pre>
+
+        <h3>Signal Effects</h3>
+        <p>Los efectos realizan tareas secundarias en respuesta a cambios de un Signal.</p>
+    <pre>
+        <code>
+            const contador = signal(0);
+
+            effect(() => {
+            console.log(`El contador cambió: ${contador()}`);
+            });
+
+            contador.set(5); // Esto activará el efecto, imprimiendo "El contador cambió: 5"
+
+        </code>
     </pre>
 </section>
         <section id="ionic">
             <h2>Ionic</h2>
             <h3>¿Que es?</h3>
+            <p>Ionic es un framework de código abierto que permite a los desarrolladores crear aplicaciones móviles híbridas utilizando tecnologías web como HTML, CSS y JavaScript. Con Ionic, puedes desarrollar aplicaciones móviles que funcionen en múltiples plataformas, como iOS, Android y la web, con una única base de código. Ionic se basa en Angular (aunque también soporta React y Vue) y utiliza Apache Cordova o Capacitor para acceder a las funcionalidades nativas del dispositivo, como la cámara, GPS, almacenamiento, etc.</p>
+            
+            <h3>¿Cómo se configura ionic?</h3>
+            <p>Para Ionic se necesita tener instalado Node.js</p>
+            <pre>
+        <code>
+        // Instalar Ionic CLI 
+        npm install -g @ionic/cli
+        
+        // Crear un nuevo proyecto Ionic
+        ionic start nombre-proyecto
+        
+        // Navegar al directorio del proyecto
+        cd nombre-proyecto
+        
+        // Iniciar el servidor de desarrollo
+        ionic serve
+        </code>
+            </pre>
+        
+            <h3>Características de Ionic</h3>
+            <ul>
+                <li>Ionic tiene una compatibilidad multiplataforma ya que permite desarrollar una única base de código que funciona en múltiples plataformas como iOS, Android, y la web.</li>
+                <br>
+                <li> Ofrece un diseño limpio, sencillo y funcional.</li>
+                <br>
+                <li> La interfaz ofrece una amplia gama de componentes UI listos para usar que están diseñados para parecerse y comportarse como componentes nativos en cada plataforma.
+                </li>
+                <br>
+                <li> A través de Capacitor o Cordova, Ionic permite acceder a funcionalidades nativas del dispositivo como la cámara, GPS, notificaciones push, y almacenamiento local.
+                </li>
+                <br>
+                <li>Está construido sobre HTML, CSS y JavaScript.
+                </li>
+                <br>
+                <li>Se puede usar con Angular, React y Vue.</li>
+                <br>
+                <li>Ionic tiene un diseño limpio, atractivo y fácil de aprender, también permite personalizar fácilmente el tema de la aplicación, ajustando colores, tipografía y otros aspectos visuales a través de CSS variables y estilos.</li>
+                <br>
+                <li>Se basa en los principios de diseño web responsive para adaptar el contenido a diferentes tamaños de pantalla o densidad de píxeles del destino.</li>
+                <br>
+            </ul>
+
+            
+
         </section>
     </main>
     <footer>
